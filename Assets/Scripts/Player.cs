@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
          canMove = false ;
 
          // Push the cube:
-         mainCube.CubeRigidbody.AddForce (Vector3.forward * pushForce, ForceMode.Impulse) ;
+         mainCube.CubeRigidbody.AddForce (Vector3.back * pushForce, ForceMode.Impulse) ;
 
          Invoke ("SpawnNewCube", 0.3f) ;
       }
