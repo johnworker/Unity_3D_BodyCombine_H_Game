@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class BodyPart : MonoBehaviour
 {
-    static int bodyID = 0;
+    static int bodyStaticID = 0;
     [HideInInspector] public int bodyPartID;
-    [SerializeField] private GameObject[] bodyPart;
     [HideInInspector] public Rigidbody bodyPartRigidbody;
+    [HideInInspector] public bool IsMainBodyPart;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        bodyPartID = bodyStaticID++;
+        bodyPartRigidbody = GetComponent<Rigidbody>();
     }
-
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

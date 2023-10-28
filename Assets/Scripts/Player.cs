@@ -7,14 +7,16 @@ public class Player : MonoBehaviour {
    [Space]
    [SerializeField] private TouchSlider touchSlider ;
 
-   private Cube mainCube ;
+   //private Cube mainCube ;
+   private BodyPart mainBody;
 
    private bool isPointerDown ;
    private bool canMove ;
-   private Vector3 cubePos ;
+   //private Vector3 cubePos ;
+   private Vector3 bodyPos;
 
    private void Start () {
-      SpawnCube () ;
+      SpawnBody();
       canMove = true ;
 
       // Listen to slider events:
@@ -25,9 +27,9 @@ public class Player : MonoBehaviour {
 
    private void Update () {
       if (isPointerDown)
-         mainCube.transform.position = Vector3.Lerp (
-            mainCube.transform.position,
-            cubePos,
+            mainBody.transform.position = Vector3.Lerp (
+            mainBody.transform.position,
+            bodyPos,
             moveSpeed * Time.deltaTime
          ) ;
    }
@@ -38,8 +40,8 @@ public class Player : MonoBehaviour {
 
    private void OnPointerDrag (float xMovement) {
       if (isPointerDown) {
-         cubePos = mainCube.transform.position ;
-         cubePos.x = xMovement * cubeMaxPosX ;
+         bodyPos = mainBody.transform.position ;
+         bodyPos.x = xMovement * cubeMaxPosX ;
       }
    }
 
@@ -49,24 +51,23 @@ public class Player : MonoBehaviour {
          canMove = false ;
 
          // Push the cube:
-         mainCube.CubeRigidbody.AddForce (Vector3.back * pushForce, ForceMode.Impulse) ;
+         mainBody.bodyPartRigidbody.AddForce (Vector3.back * pushForce, ForceMode.Impulse) ;
 
          Invoke ("SpawnNewCube", 0.3f) ;
       }
    }
 
    private void SpawnNewCube () {
-      mainCube.IsMainCube = false ;
+      mainBody.IsMainBodyPart = false ;
       canMove = true ;
-      SpawnCube () ;
+      SpawnBody();
    }
 
-   private void SpawnCube () {
-      mainCube = CubeSpawner.Instance.SpawnRandom () ;
-      mainCube.IsMainCube = true ;
+   private void SpawnBody() {
+      mainBody.IsMainBodyPart = true ;
 
-      // reset cubePos variable
-      cubePos = mainCube.transform.position ;
+      // reset bodyPos variable
+      bodyPos = mainBody.transform.position ;
    }
 
    private void OnDestroy () {
