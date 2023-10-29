@@ -13,7 +13,6 @@ public class BodySpawner : MonoBehaviour
 
     [SerializeField] private GameObject[] bodyPrefab;
 
-
     private Vector3 defaultSpawnPosition;
 
     private void Awake()
@@ -43,7 +42,7 @@ public class BodySpawner : MonoBehaviour
         bodysQueue.Enqueue(bodyPart);
     }
 
-    public void DestroyCube(BodyPart bodyPart)
+    public void DestroyBody(BodyPart bodyPart)
     {
         bodyPart.bodyPartRigidbody.velocity = Vector3.zero;
         bodyPart.bodyPartRigidbody.angularVelocity = Vector3.zero;

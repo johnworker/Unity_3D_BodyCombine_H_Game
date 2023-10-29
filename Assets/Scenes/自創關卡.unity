@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 199806944317310548, guid: c6d705d1af67da24dbdf8cf8461c8fd7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d705d1af67da24dbdf8cf8461c8fd7, type: 3}
 --- !u!4 &339860464 stripped
@@ -753,7 +757,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 693573502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e142fe5ad26f1c4793380d18be4fd67, type: 3}
+  m_Script: {fileID: 11500000, guid: ce133ae7cee615d4c846e8698de3f5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &706504376
@@ -1911,7 +1915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978221046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2032,7 +2036,7 @@ MonoBehaviour:
   moveSpeed: 16
   pushForce: 24
   cubeMaxPosX: 1.54
-  touchSlider: {fileID: 693573505}
+  touchSlider: {fileID: 0}
 --- !u!4 &2097326642
 Transform:
   m_ObjectHideFlags: 0

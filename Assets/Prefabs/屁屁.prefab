@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7882415128230981262}
   - component: {fileID: 7882415128230981263}
   - component: {fileID: -9022099188792581238}
+  - component: {fileID: 5591046772009887928}
+  - component: {fileID: 8485489910386223311}
   m_Layer: 0
   m_Name: "\u5C41\u5C41"
   m_TagString: Untagged
@@ -115,6 +117,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &5591046772009887928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882415128230981260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5886af9364f1f48b6256c20662c6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyPartID: 0
+  bodyPartRigidbody: {fileID: 0}
+  IsMainBodyPart: 0
+--- !u!114 &8485489910386223311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882415128230981260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f226cef6deb0f4780304eae2c593f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7882415128763198990
 PrefabInstance:
   m_ObjectHideFlags: 0

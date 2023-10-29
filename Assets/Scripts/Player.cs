@@ -18,7 +18,6 @@ public class Player : MonoBehaviour {
     private void Awake()
     {
         mainBody = GetComponent<BodyPart>();
-        mainBody = transform.Find("MainBody").GetComponent<BodyPart>(); // 将 "MainBody" 替换为实际的子对象名称
     }
 
     private void Start () {
@@ -64,7 +63,7 @@ public class Player : MonoBehaviour {
    }
 
    private void SpawnNewBody () {
-      mainBody.IsMainBodyPart = false ;
+      mainBody.IsMainBodyPart = true ;
       canMove = true ;
       SpawnBody();
    }

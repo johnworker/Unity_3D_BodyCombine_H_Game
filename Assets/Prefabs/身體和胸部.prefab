@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6457993999760302078}
   - component: {fileID: 6457993999760302077}
   - component: {fileID: -3525680918995019622}
+  - component: {fileID: 170737227772720548}
+  - component: {fileID: -936656974811316031}
   m_Layer: 0
   m_Name: "\u8EAB\u9AD4\u548C\u80F8\u90E8"
   m_TagString: Untagged
@@ -115,6 +117,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &170737227772720548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457993999760302076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5886af9364f1f48b6256c20662c6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyPartID: 0
+  bodyPartRigidbody: {fileID: 0}
+  IsMainBodyPart: 0
+--- !u!114 &-936656974811316031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457993999760302076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f226cef6deb0f4780304eae2c593f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6457994000773762056
 PrefabInstance:
   m_ObjectHideFlags: 0
