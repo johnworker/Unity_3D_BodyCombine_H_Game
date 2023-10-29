@@ -23,6 +23,7 @@ public class BodySpawner : MonoBehaviour
         defaultSpawnPosition = transform.position;
 
         InitializeCubesQueue();
+
     }
 
     private void InitializeCubesQueue()

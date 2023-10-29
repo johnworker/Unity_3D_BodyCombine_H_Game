@@ -15,8 +15,14 @@ public class Player : MonoBehaviour {
    //private Vector3 cubePos ;
    private Vector3 bodyPos;
 
-   private void Start () {
-      SpawnBody();
+    private void Awake()
+    {
+        mainBody = GetComponent<BodyPart>();
+        mainBody = transform.Find("MainBody").GetComponent<BodyPart>(); // 将 "MainBody" 替换为实际的子对象名称
+    }
+
+    private void Start () {
+      SpawnNewBody();
       canMove = true ;
 
       // Listen to slider events:
@@ -57,7 +63,7 @@ public class Player : MonoBehaviour {
       }
    }
 
-   private void SpawnNewCube () {
+   private void SpawnNewBody () {
       mainBody.IsMainBodyPart = false ;
       canMove = true ;
       SpawnBody();
