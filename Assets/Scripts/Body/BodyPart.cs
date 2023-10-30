@@ -7,7 +7,7 @@ public class BodyPart : MonoBehaviour
     static int bodyStaticID = 0;
     [HideInInspector] public int bodyPartID;
     [HideInInspector] public Rigidbody bodyPartRigidbody;
-    internal bool IsMainBodyPart;
+    [HideInInspector] public bool IsMainBodyPart;
 
     private void Awake()
     {

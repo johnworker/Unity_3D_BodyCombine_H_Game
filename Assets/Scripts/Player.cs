@@ -63,13 +63,11 @@ public class Player : MonoBehaviour {
    }
 
    private void SpawnNewBody () {
-      mainBody.IsMainBodyPart = true ;
       canMove = true ;
       SpawnBody();
    }
 
    private void SpawnBody() {
-      mainBody.IsMainBodyPart = true ;
 
       // reset bodyPos variable
       bodyPos = mainBody.transform.position ;
